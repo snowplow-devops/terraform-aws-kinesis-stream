@@ -21,4 +21,8 @@ resource "aws_kinesis_stream" "stream" {
   shard_level_metrics = var.shard_level_metrics
 
   tags = local.tags
+
+  stream_mode_details {
+    stream_mode = var.stream_mode_details
+  }
 }

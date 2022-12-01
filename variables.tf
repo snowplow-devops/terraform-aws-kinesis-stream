@@ -44,3 +44,9 @@ variable "tags" {
   default     = {}
   type        = map(string)
 }
+
+variable "stream_mode_details" {
+  description = "Capacity mode of the stream, either ON_DEMAND or PROVISIONED"
+  default     = "PROVISIONED"
+  type        = string
+}
