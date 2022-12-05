@@ -19,13 +19,13 @@ module "stream" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 3.45.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 3.71.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.45.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.71.0 |
 
 ## Modules
 
@@ -48,6 +48,7 @@ No modules.
 | <a name="input_retention_period"></a> [retention\_period](#input\_retention\_period) | The number of hours that a shard should retain data for | `number` | `24` | no |
 | <a name="input_shard_count"></a> [shard\_count](#input\_shard\_count) | The number of shards to create the stream with | `number` | `1` | no |
 | <a name="input_shard_level_metrics"></a> [shard\_level\_metrics](#input\_shard\_level\_metrics) | A list of shard-level CloudWatch metrics which can be enabled for the stream | `list(string)` | `[]` | no |
+| <a name="input_stream_mode_details"></a> [stream\_mode\_details](#input\_stream\_mode\_details) | Capacity mode of the stream, either ON\_DEMAND or PROVISIONED (note: ON\_DEMAND comes with a much higher base cost for lower throughput - https://aws.amazon.com/kinesis/data-streams/pricing/) | `string` | `"PROVISIONED"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | The tags to append to this resource | `map(string)` | `{}` | no |
 
 ## Outputs

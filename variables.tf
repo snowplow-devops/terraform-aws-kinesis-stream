@@ -44,3 +44,9 @@ variable "tags" {
   default     = {}
   type        = map(string)
 }
+
+variable "stream_mode_details" {
+  description = "Capacity mode of the stream, either ON_DEMAND or PROVISIONED (note: ON_DEMAND comes with a much higher base cost for lower throughput - https://aws.amazon.com/kinesis/data-streams/pricing/)"
+  default     = "PROVISIONED"
+  type        = string
+}
